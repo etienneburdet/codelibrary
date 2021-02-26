@@ -8,6 +8,24 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+  - name: Pages
+    label: Pages
+    label_singular: Page
+    folder: "content"
+    create: true
+    nested:
+      depth: 4
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Date
+        name: date
+        widget: hidden
+      - label: Body
+        name: body
+        widget: markdown
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
   - name: Resources # Used in routes, e.g., /admin/collections/blog
     label: Resources # Used in the UI
     label_singular: Resource
