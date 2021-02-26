@@ -12,12 +12,11 @@ collections:
     label: Resources # Used in the UI
     label_singular: Resource
     folder: "content" # The path to the folder where the documents are stored
-    path: "content/{{fields.section}}/{{field.page}}/{{field.order}}"
     create: true # Allow users to create new documents in this collection
     nested:
       depth: 5
-    media_folder: "{{fields.section}}/{{field.page}}/{{field.order}}"
-    public_folder: "{{fields.section}}/{{field.page}}/{{field.order}}"
+    media_folder: "./"
+    public_folder: "./"
     fields:
       - label: Title
         name: title
@@ -43,3 +42,5 @@ collections:
       - label: Files
         name: files
         widget: file
+        allow_multiple: true
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
