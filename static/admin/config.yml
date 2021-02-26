@@ -40,11 +40,6 @@ collections:
       - label: Body
         name: body
         widget: markdown
-      - label: HTML
-        name: html
-        widget: file
-        default_language: html
-        index_file: 'html.inc'
-      - label: CSS
-        name: css
+      - label: Files
+        name: files
         widget: file
